@@ -19,11 +19,11 @@ INSERT INTO time (idtime, nome, liga, pais) VALUES(18,'Roma','Calcio A','italia'
 INSERT INTO time (idtime, nome, liga, pais) VALUES(19,'SL Benfica','Liga NOS','portugal');
 INSERT INTO time (idtime, nome, liga, pais) VALUES(20,'Sporting CP','Liga NOS','portugal');
 
-INSERT INTO usuario (idusuario, nome, email, senha, pais, foto_us) VALUES(1, 'calebe', calebe@acad.pucrs.br, 'partiurio', 'Porto Alegre - RS', '');
-INSERT INTO usuario (idusuario, nome, email, senha, pais, foto_us) VALUES(2, 'gabriel', gabriel@acad.pucrs.br, 'partiurio', 'Porto Alegre - RS', '');
-INSERT INTO usuario (idusuario, nome, email, senha, pais, foto_us) VALUES(3, 'jhonata', jhonata@acad.pucrs.br, 'partiurio', 'Porto Alegre - RS', '');
-INSERT INTO usuario (idusuario, nome, email, senha, pais, foto_us) VALUES(4, 'joao', joao@acad.pucrs.br, 'partiurio', 'Porto Alegre - RS', '');
-INSERT INTO usuario (idusuario, nome, email, senha, pais, foto_us) VALUES(5, 'marcelo', marcelo@acad.pucrs.br, 'partiurio', 'Porto Alegre - RS', '');
+INSERT INTO usuario (idusuario, nome, email, senha, pais, foto_us) VALUES(1, 'calebe', 'calebe@acad.pucrs.br', 'partiurio', 'Porto Alegre - RS', '');
+INSERT INTO usuario (idusuario, nome, email, senha, pais, foto_us) VALUES(2, 'gabriel', 'gabriel@acad.pucrs.br', 'partiurio', 'Porto Alegre - RS', '');
+INSERT INTO usuario (idusuario, nome, email, senha, pais, foto_us) VALUES(3, 'jhonata', 'jhonata@acad.pucrs.br', 'partiurio', 'Porto Alegre - RS', '');
+INSERT INTO usuario (idusuario, nome, email, senha, pais, foto_us) VALUES(4, 'joao', 'joao@acad.pucrs.br', 'partiurio', 'Porto Alegre - RS', '');
+INSERT INTO usuario (idusuario, nome, email, senha, pais, foto_us) VALUES(5, 'marcelo', 'marcelo@acad.pucrs.br', 'partiurio', 'Porto Alegre - RS', '');
 
 INSERT INTO grupo (idgrupo, nome, foto_grupo) VALUES(1, 'Engenharia de Software', '');
 
