@@ -1,6 +1,19 @@
 --CREATE
 USE ultimateteam ;
 
+CREATE TABLE IF NOT EXISTS ranking_ordenado (
+pos INT AUTO_INCREMENT PRIMARY KEY,
+usuario_idusuario INT,
+vitorias INT,
+derrotas INT,
+empates INT,
+gols_pro INT,
+gols_contr INT,
+partidas INT,
+pontos_partidas INT,
+pontos_possiveis INT,
+aproveitamento FLOAT );
+
 CREATE TABLE usuario (
   idusuario INTEGER NOT NULL AUTO_INCREMENT,
   nome VARCHAR(45) NOT NULL,
