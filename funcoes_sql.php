@@ -27,7 +27,7 @@ function create_confrontos($user1,$user2) {
         FROM partida as p
         WHERE (p.id_usuario_desafiado =".$user1." or p.id_usuario_desafiado = ".$user2.")
         AND
-        (p.id_usuario_desafiante = ?  or p.id_usuario_desafiante = ?) ;
+        (p.id_usuario_desafiante =".$user1." or p.id_usuario_desafiante = ".$user2.") ;
 
 
         DROP TABLE IF EXISTS rk_confrontos_diretos;
