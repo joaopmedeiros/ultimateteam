@@ -53,7 +53,7 @@ You can delete these styles or move it to your custom css file -->
 		<main>
 			<center>
 				<div class="section"></div>
-				<img src="images/logo_login.jpg" width="250">
+				<img src="img/logo_login.jpg" width="250">
 				<div class="section"></div>
 				<div class="section"></div>
 				<div class="section"></div>
