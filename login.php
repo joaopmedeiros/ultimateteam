@@ -27,7 +27,7 @@
             var user = $('#user').val();
             var pass = $('#password').val();
 
-            $.post("auth.php", {"user": user, "password": pass}, function(data){
+            $.post("controllers/auth.php", {"user": user, "password": pass}, function(data){
                 Materialize.Toast.removeAll();
                 if(data == "sucesso") {
                     Materialize.toast('Sucesso!', 10000, 'green');
