@@ -34,16 +34,16 @@ You can delete these styles or move it to your custom css file -->
 			$(document).on("click", "#btn_login", function () {
 				var user = $('#user').val();
 				var pass = $('#password').val();
-
+				
 				$.post("controllers/auth.php", { "user": user, "password": pass }, function (data) {
+					//console.log(data);
 					window.location = 'index.php';
 					//Materialize.Toast.removeAll();
 					//Materialize.toast('Sucesso!', 10000, 'green');
 				}).catch(function (e) {
 					Materialize.Toast.removeAll();
 					Materialize.toast('Usuário ou senha incorretos', 10000, 'red');
-				}
-					);
+				});
 			});
 		</script>
 	</head>
@@ -88,7 +88,7 @@ You can delete these styles or move it to your custom css file -->
 							<br />
 							<center>
 								<div class='row'>
-									<button type="submit" id="btn_login" name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Login</button>
+									<button type="button" id="btn_login" name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Login</button>
 								</div>
 							</center>
 						</form>
@@ -104,8 +104,8 @@ You can delete these styles or move it to your custom css file -->
 		<!-- Modal Structure -->
 		<div id="modal1" class="modal">
 			<div class="modal-content">
-				<h4>Não vai dar não</h4>
-				<p>Só lamento</p>
+				<h4>N&atilde;o vai dar n&atilde;o</h4>
+				<p>S&oacute; lamento</p>
 			</div>
 			<div class="modal-footer">
 				<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Fechar</a>
