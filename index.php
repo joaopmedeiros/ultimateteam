@@ -14,6 +14,8 @@
 <body>
 <?php include("header.php"); ?>
 
+<?php include("sideNav.php"); ?>
+
 
 
 <?php include("footer.php"); ?>
