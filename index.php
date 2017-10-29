@@ -1,12 +1,18 @@
 
 <?php 
+
 $title = "Ultimate Team";
 include("header.php");
 ?>
 
 <main>
-    <div class="container" style="margin-top:20px;">
-        Hello World
+    <div class="container">
+        <div class="row">
+
+            <label>Grupo: Engenharia de Software</label>
+            <label>Jogador</label> <?php echo $u->getNome(); ?>
+            
+        </div>
     </div>
 </main>
 
