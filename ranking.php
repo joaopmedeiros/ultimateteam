@@ -2,7 +2,7 @@
     require_once 'controllers/queries.php';
 
     $title = "Ultimate Team";
-    include("header.php");
+   
 ?>
 <main>
     <div class="container" style="margin-top:20px;">
@@ -53,6 +53,3 @@
     </div>
 </main>
 
-<?php    
-    include("footer.php");
-?>
