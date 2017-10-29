@@ -37,11 +37,14 @@
 			if(!isset($_SESSION['logado'])) {
 				session_unset();
 				session_destroy();
-				header('Location: login.php');
+				if(basename($_SERVER['PHP_SELF']) != "login.php") {
+					header('Location: login.php');
+				}
 			}
 			// Caso esteja na página de login
-			if(basename($_SERVER['PHP_SELF']) == "login.php") {
+			else if(basename($_SERVER['PHP_SELF']) == "login.php") {
 				header('Location: index.php');
+				echo "Outra coisa";
 			}
 		}
 

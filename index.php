@@ -14,7 +14,12 @@
 <?php include("header.php"); ?>
 
 <main>
-
+<?php
+      require_once 'class/Time.php';
+      $cTime = new Time();
+      $cTime->SelecionarUmTime(9);
+      echo '<img src="img/teams/' . $cTime->getId() . '.png" width="32px" height="32px" /> ' . $cTime->getNome();
+    ?>
 </main>
 
 <?php include("footer.php"); ?>
