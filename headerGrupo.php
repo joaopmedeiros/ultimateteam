@@ -10,7 +10,7 @@
 <header>
 <nav class="nav-extended card-panel teal lighten-2">
 <div class="nav-wrapper">
-  <a href="#" class="brand-logo">Engenheiro de Software</a>
+  <a href="#" class="brand-logo" style="white-space: nowrap">Eng. de Software</a>
   <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
   <ul id="nav-mobile" class="right hide-on-med-and-down">
   <li><a href="index.php">Dashboard</a></li>
