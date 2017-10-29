@@ -1,4 +1,5 @@
 body {
+<<<<<<< HEAD
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -11,3 +12,14 @@ body {
   .ilike-blue-container {
     @extend .blue, .lighten-4;
   }
+=======
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background: #fff;
+}
+
+main {
+  flex: 1 0 auto;
+}
+>>>>>>> origin/dev

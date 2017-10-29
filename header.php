@@ -1,4 +1,5 @@
 <header>
+
 <nav>
 <div class="nav-wrapper card-panel teal lighten-2">
   <a href="#!" class="brand-logo">Ultimate Team</a>
@@ -30,4 +31,5 @@
   <script>
     $(".button-collapse").sideNav();
   </script>
+
 </header>
