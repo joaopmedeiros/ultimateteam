@@ -1,22 +1,15 @@
-<footer class="page-footer card-panel teal lighten-2">
-  <div class="row">
-    <div class="col s12">
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text">Desenvolvido pelo grupo Ultimate Team</h5
-            <p class="grey-text text-lighten-4">Gerencie seu campeonato de futebol de forma fácil, rápida e divertida</p>
-          </div>
-          
-        </div>
-      </div>
-      <div class="footer-copyright">
-        <div class="container">
-          © 2017 Ultimate Team
-         
-        </div>
-      </div>
-    </div>
-  </div>
+<footer class="page-footer teal lighten-2">
+	<div class="row">
+		<div class="col s12">
+				<div class="container"style="text-align:center;" >
+					© 2017 Ultimate Team
+			</div>
+		</div>
+	</div>
 
 </footer>
+	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script>$(".button-collapse").sideNav();</script>
+</body>
+</html>
