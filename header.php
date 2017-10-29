@@ -74,7 +74,7 @@
 								<a href="#">Perfil</a>
 							</li>
 							<li>
-								<a href="grupos.php">Grupos</a>
+								<a href="grupo.php">Grupos</a>
 							</li>
 							<li>
 								<a href="confrontoDireto.php">Confronto Direto</a>
