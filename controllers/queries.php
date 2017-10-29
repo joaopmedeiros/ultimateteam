@@ -98,7 +98,7 @@ function createConfronto($user1,$user2) {
     UNION ALL
     SELECT p.id_usuario_desafiado as idusuario, sum(gols_desafiado) as gols
     FROM confrontos_diretos as p
-    GROUP BY p.id_usuario_desafiante ) AS A 
+    GROUP BY p.id_usuario_desafiado ) AS A 
     GROUP BY A.idusuario ) as gp on u.idusuario = gp.idusuario
     INNER JOIN (
     -- gols sofridos por usuario
@@ -110,7 +110,7 @@ function createConfronto($user1,$user2) {
     UNION ALL
     SELECT p.id_usuario_desafiado as idusuario, sum(gols_desafiante) as golscontra
     FROM confrontos_diretos as p
-    GROUP BY p.id_usuario_desafiante ) AS A 
+    GROUP BY p.id_usuario_desafiado ) AS A 
     GROUP BY A.idusuario ) as gs on u.idusuario = gs.idusuario
     LEFT JOIN (
     -- partidas por usuario
@@ -167,7 +167,7 @@ function updateRanking(){
     SELECT u.idusuario as usuario_idusuario,
      v.vitorias,
       d.derrotas,
-       case when e.empates is null then 0 else e.empates as empates,
+       case when e.empates is null then 0 else e.empates end as empates,
         gp.gols_pro,
          gs.gols_sofr as gols_contr,
           par.partidasjogas as partidas,
@@ -214,7 +214,7 @@ function updateRanking(){
     UNION ALL
     SELECT p.id_usuario_desafiado as idusuario, sum(gols_desafiado) as gols
     FROM partida as p
-    GROUP BY p.id_usuario_desafiante ) AS A 
+    GROUP BY p.id_usuario_desafiado ) AS A 
     GROUP BY A.idusuario ) as gp on u.idusuario = gp.idusuario
     LEFT JOIN (
     -- gols sofridos por usuario
@@ -226,7 +226,7 @@ function updateRanking(){
     UNION ALL
     SELECT p.id_usuario_desafiado as idusuario, sum(gols_desafiante) as golscontra
     FROM partida as p
-    GROUP BY p.id_usuario_desafiante ) AS A 
+    GROUP BY p.id_usuario_desafiado ) AS A 
     GROUP BY A.idusuario ) as gs on u.idusuario = gs.idusuario
     LEFT JOIN (
     -- partidas por usuario
@@ -249,7 +249,7 @@ function updateRanking(){
 }
 // Testar
 function updateRankingOrdenado(){
-    $sqlAtualizaRankingOrdenado = "DELETE FROM ranking;
+    $sqlAtualizaRankingOrdenado = "DELETE FROM ranking_ordenado;
     ALTER TABLE ranking_ordenado AUTO_INCREMENT = 1 ;
     INSERT INTO ranking_ordenado (usuario_idusuario,vitorias,derrotas,empates,gols_pro,gols_contr,partidas,pontos_partidas,pontos_possiveis,aproveitamento)
     SELECT usuario_idusuario,vitorias,derrotas,empates,gols_pro,gols_contr,partidas,pontos_partidas,pontos_possiveis,aproveitamento
@@ -343,32 +343,47 @@ function getPosicaoUsuario($idusuario){
         die($e->getMessage());
     }
 }
-// Testar
+
 function getTimes(){
+    $cConexao = new Conexao();
+    $pdo = $cConexao->Conectar();
     $sqlGetTimes= "SELECT t.* FROM time as t";
     try{
         $q1 = $pdo->prepare($sqlGetTimes);
         $q1->execute();
-        $result = $q1->fetchAll();
-        return $result;  
+        return $q1;  
     } catch(PDOException $e) {
         die($e->getMessage());
     }    
 }
-// Testar
-/*function inserePartida($gols_desafiante, $gols_desafiado, $idtime_desafiante, $idtime_desafiado, $id_usuario_desafiante, $id_usuario_desafiado){
-    $sqlInsertPartida = "INSERT INTO partida (gols_desafiante, gols_desafiado, idtime_desafiante, idtime_desafiado, id_usuario_desafiante, id_usuario_desafiado)
-    VALUES (?,?,?,?,?,?);";
-    $q1 = $pdo->prepare($sqlInsertConfronto);
-    $q1->bindValue(1, $gols_desafiante, PDO::PARAM_STR);
-    $q1->bindValue(2, $gols_desafiado, PDO::PARAM_STR);
-    $q1->bindValue(3, $idtime_desafiante, PDO::PARAM_STR);
-    $q1->bindValue(4, $idtime_desafiado, PDO::PARAM_STR);
-    $q1->bindValue(5, $id_usuario_desafiante, PDO::PARAM_STR);
-    $q1->bindValue(6, $id_usuario_desafiado, PDO::PARAM_STR);
-    $q1->execute();
-    catch(PDOException $e) {
+
+function getAdversarios($idUsuario){
+    $cConexao = new Conexao();
+    $pdo = $cConexao->Conectar();
+    $sqlGetAdv= "SELECT idusuario, nome FROM usuario WHERE idusuario <> ?";
+    try{
+        $q1 = $pdo->prepare($sqlGetAdv);
+        $q1->bindValue(1, $idUsuario, PDO::PARAM_INT);
+        $q1->execute();
+        return $q1;  
+    } catch(PDOException $e) {
         die($e->getMessage());
-    }
-}*/
+    }    
+}
+
+// Testar
+function inserePartida($gols_desafiante, $gols_desafiado, $idtime_desafiante, $idtime_desafiado, $id_usuario_desafiante, $id_usuario_desafiado){
+    $cConexao = new Conexao();
+    $pdo = $cConexao->Conectar();
+    $sqlInsertPartida = "INSERT INTO partida (gols_desafiado, gols_desafiante, idtime_desafiante, idtime_desafiado, id_usuario_desafiante, id_usuario_desafiado)
+    VALUES (?,?,?,?,?,?);";
+    $q1 = $pdo->prepare($sqlInsertPartida);
+    $q1->bindValue(1, $gols_desafiante, PDO::PARAM_INT);
+    $q1->bindValue(2, $gols_desafiado, PDO::PARAM_INT);
+    $q1->bindValue(3, $idtime_desafiante, PDO::PARAM_INT);
+    $q1->bindValue(4, $idtime_desafiado, PDO::PARAM_INT);
+    $q1->bindValue(5, $id_usuario_desafiante, PDO::PARAM_INT);
+    $q1->bindValue(6, $id_usuario_desafiado, PDO::PARAM_INT);
+    $q1->execute();
+}
 ?>

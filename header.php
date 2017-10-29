@@ -13,7 +13,7 @@
 	<body>
 		<div class="navbar-fixed">
 			<header>
-				<nav "nav-extended">
+				<nav class="nav">
 					<div class="nav-wrapper teal lighten-2">
 						<a href="#!" class="brand-logo" style="white-space: nowrap">Ultimate Team</a>
 						<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
