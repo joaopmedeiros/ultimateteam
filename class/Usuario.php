@@ -37,7 +37,14 @@
 			if(!isset($_SESSION['logado'])) {
 				session_unset();
 				session_destroy();
-				header('Location: login.php');
+				if(basename($_SERVER['PHP_SELF']) != "login.php") {
+					header('Location: login.php');
+				}
+			}
+			// Caso esteja na página de login
+			else if(basename($_SERVER['PHP_SELF']) == "login.php") {
+				header('Location: index.php');
+				echo "Outra coisa";
 			}
 		}
 
@@ -47,7 +54,7 @@
 			session_destroy();
 			setcookie('usuario_gravado');
 			setcookie('senha_gravada');
-			header('Location: index.php');
+			header('Location: login.php');
 		}
 
 		function getId() {
