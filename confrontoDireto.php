@@ -22,13 +22,14 @@
 
         <div  style=" background-color: #0D47A1;">
             <div style="margin-bottom: 10%;" >
-                <div style="float:rigth; margin-right: 1%; margin-top: 1%" class="input-field col s6 m6">
-                    <img class="circle responsive-img  " src="img/pessoa.jpg" width="100" height="100" >
+                <div style=" margin-right: 1%; margin-top: 1%" class="input-field col s6 m6">
+                    <img class="circle responsive-img  " style="margin-left: 5%" src="img/pessoa.jpg" width="50"  >
+
                     <select id="oponente" style="margin-top: 20%;" class="icons right circle">
                         <option value="" disabled selected>Oponente</option>
-                        <option value="" data-icon="img/logo_login.jpg" class="left circle">"ALGUM OPONENTE"</option>
-                        <option value="" data-icon="img/pessoa.jpg" class="left circle">OUTRO OPONENTE</option>
-                        <option value="" data-icon="images/yuna.jpg" class="left circle">ADVINHA...</option>
+                        <option value="" data-icon="img/marcelo.jpg" class="left circle">"ALGUM OPONENTE"</option>
+                        <option value="" data-icon="img/calebe.jpg" class="left circle">OUTRO OPONENTE</option>
+                        <option value="" data-icon="img/jhonata.jpg" class="left circle">ADVINHA...</option>
                     </select>
 
                 </div>
