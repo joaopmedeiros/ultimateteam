@@ -36,14 +36,14 @@ $cGrupo = new Grupo();
   <ul class="tabs tabs-transparent">
     <li class="tab"><a href="#test1">Partida</a></li>
     <li class="tab"><a herf="#test2" >Classificação</a></li>
-    <li class="tab"><a href="#test3">Valendo</a></li>
+
     
   </ul>
 </div>
 </nav>
 <div id="test1" class="col s12"><?php include("partida.php"); ?></div>
 <div id="test2" class="col s12"><?php include("classificacao.php"); ?></div>
-<div id="test3" class="col s12"><?php include("valendo.php"); ?></div>
+
 
   <script>
     $(".button-collapse").sideNav();
