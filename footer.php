@@ -2,7 +2,8 @@
 	<div class="row">
 		<div class="col s12">
 				<div class="container"style="text-align:center;" >
-					© 2017 Ultimate Team
+					© 2017 <strong>Ultimate Team</strong><br />
+					Desenvolvido no 2º semestre com PHP e muito amor
 			</div>
 		</div>
 	</div>
