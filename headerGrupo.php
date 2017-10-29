@@ -1,5 +1,3 @@
-
-<<<<<<< HEAD
 <?php require_once 'controllers/checkSession.php'; ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -13,15 +11,6 @@
 	</head>
 	<body>
 		<header>
-=======
-
-<?php
-require_once 'class/Grupo.php';
-$cGrupo = new Grupo();
-?>
-
-<header>
->>>>>>> origin/dev
 <nav class="nav-extended card-panel teal lighten-2">
 <div class="nav-wrapper">
   <a href="#" class="brand-logo">Grupo</a>
@@ -36,7 +25,7 @@ $cGrupo = new Grupo();
   </ul>
 
   <ul class="side-nav" id="mobile-demo">
-  <li ><img src="img/calebe.jpg" class="circle" width="20%">
+  <li ><img src="user/img/calebe.jpg" class="circle" width="20%">
   
   <li><a href="#">Calebe</a></li>
   
@@ -58,7 +47,7 @@ $cGrupo = new Grupo();
 </div>
 </nav>
 <div id="partida" class="col s12"><?php include("partida.php"); ?></div>
-<div id="classificacao" class="col s12"><?php include("classificacao.php"); ?></div>
+<div id="classificacao" class="col s12"> 222<!--<?php include("ranking.php"); ?>--></div>
 
 
   <script>

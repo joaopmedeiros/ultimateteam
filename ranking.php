@@ -1,9 +1,4 @@
-<?php
-    require_once 'controllers/queries.php';
-
-    $title = "Ultimate Team";
-    include("header.php");
-?>
+<html>
 <main>
     <div class="container" style="margin-top:20px;">
         <h3>Ranking</h3>
@@ -52,7 +47,4 @@
         </table>
     </div>
 </main>
-
-<?php    
-    include("footer.php");
-?>
+</html>

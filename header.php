@@ -42,7 +42,7 @@
 							<li><a href="#">Configurações</a></li>
 							<li><a href="logout.php">Logoff</a></li>
 						</ul>
->>>>>>> origin/dev
+
 				</div>
 			</nav>
 		</header>
