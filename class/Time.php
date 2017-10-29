@@ -1,5 +1,5 @@
 <?php
-    require_once 'Conexao.class.php';
+    require_once 'Conexao.php';
 
     class Time {
         function __construct() {
