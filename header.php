@@ -7,7 +7,7 @@
   <ul class="right hide-on-med-and-down">
   <li><a href="dashboard.php">Dashboard</a></li>
   <li><a href="#">Perfil</a></li>
-  <li><a href="grupos.php">Grupos</a></li>
+  <li><a href="grupo.php">Grupos</a></li>
   <li><a href="confrontoDireto.php">Confronto Direto</a></li>
   <li><a href="#">Configurações</a></li>
   <li><a href="logout.php">Logoff</a></li>

@@ -1,7 +1,7 @@
 
 
 <?php
-require_once 'class/Grupo.class.php';
+require_once 'class/Grupo.php';
 $cGrupo = new Grupo();
 ?>
 
