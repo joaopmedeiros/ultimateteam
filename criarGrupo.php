@@ -12,6 +12,7 @@
 	 
 </head>
 <body>
+
 <?php include("header.php"); ?>
 		
 <main>
@@ -41,6 +42,7 @@
 			</form>
 		</section>
 	</article>
+
 </div>
 </main>
 	<?php include("footer.php"); ?>
@@ -48,3 +50,4 @@
 
 
 </html>
+
