@@ -47,7 +47,7 @@
   </ul>
 </div>
 </nav>
-<div id="partida" class="col s12"><?php include("partida.php"); ?></div>
+<div id="partida" class="col s12"><?php include("cadastrarPartida.php"); ?></div>
 <div id="ranking" class="col s12"><?php include("ranking.php"); ?></div>
 
 

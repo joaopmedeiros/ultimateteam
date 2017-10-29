@@ -1,12 +1,11 @@
 <?php
   require_once 'controllers/queries.php';
-  $title = "Ultimate Team";
-  include("header.php");
+  require_once 'controllers/checkSession.php';
 ?>
   	
 <main>
   <div class="container" style="margin-top:20px;">
-    <h3>Registro de Partida</h3>
+    <h4>Registro de Partida</h4>
     <hr />
     <div class="row">
       <form class="col s12" action="insertPartida.php" method="post">
@@ -19,7 +18,7 @@
 
           <div class="input-field col s6 m6">
             <select class="icons" id="idAdversario" name="idAdversario">
-              <option value="" disabled selected>Escolha seu adversário</option>
+              <option value="" disabled selected>Seu adversário</option>
 
               <?php
                 $html = "";
@@ -37,7 +36,7 @@
         <div class="row">
           <div class="input-field col s6 m6">
             <select class="icons" id="idTimeMandante" name="idTimeMandante">
-              <option value="" disabled selected>Escolha seu time</option>
+              <option value="" disabled selected>Escolha o time</option>
 
               <?php
                 $html = "";
@@ -54,7 +53,7 @@
 
           <div class="input-field col s6 m6">
             <select class="icons" id="idTimeVisitante" name="idTimeVisitante">
-              <option value="" disabled selected>Escolha o time adversário</option>
+              <option value="" disabled selected>Escolha o time</option>
 
               <?php
                 $html = "";
@@ -91,11 +90,4 @@
     </div>
   </div>
 </main>
-
-<!--<form method="post" action="insertPartida.php">
-<input type="text" name="test" id="test">
-<input type="submit">Enviar</submit>
-</form>-->
-
-<?php include("footer.php"); ?>
 
