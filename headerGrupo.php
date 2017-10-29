@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 <?php require_once 'controllers/checkSession.php'; ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -12,6 +13,15 @@
 	</head>
 	<body>
 		<header>
+=======
+
+<?php
+require_once 'class/Grupo.php';
+$cGrupo = new Grupo();
+?>
+
+<header>
+>>>>>>> origin/dev
 <nav class="nav-extended card-panel teal lighten-2">
 <div class="nav-wrapper">
   <a href="#" class="brand-logo">Grupo</a>

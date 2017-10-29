@@ -15,24 +15,34 @@
 				<div class="nav-wrapper teal lighten-2">
 					<a href="#!" class="brand-logo">Ultimate Team</a>
 					<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-					<ul class="right hide-on-med-and-down">
-						<li><a href="dashboard.php">Dashboard</a></li>
-						<li><a href="#">Perfil</a></li>
-						<li><a href="grupo.php">Grupos</a></li>
-						<li><a href="confrontoDireto.php">Confronto Direto</a></li>
-						<li><a href="#">Configurações</a></li>
-						<li><a href="logout.php">Logoff</a></li>
-					</ul>
-					<ul class="side-nav" id="mobile-demo">
-						<li ><img src="img/calebe.jpg" class="circle" width="20%">
-						<li><a href="#">Calebe</a></li>
-						<li><a href="dashboard.php">Dashboard</a></li>
-						<li><a href="#">Perfil</a></li>
-						<li><a href="grupo.php">Grupos</a></li>
-						<li><a href="confrontoDireto.php">Confronto Direto</a></li>
-						<li><a href="#">Configurações</a></li>
-						<li><a href="logout.php">Logoff</a></li>
-					</ul>
+
+					<div class="container-fluid">
+						<ul class="right hide-on-med-and-down">
+							<li><a href="dashboard.php">Dashboard</a></li>
+							<li><a href="#">Perfil</a></li>
+							<li><a href="grupo.php">Grupos</a></li>
+							<li><a href="confrontoDireto.php">Confronto Direto</a></li>
+							<li><a href="#">Configurações</a></li>
+							<li><a href="logout.php">Logoff</a></li>
+						</ul>
+					</div>
+						<ul class="side-nav" id="mobile-demo">
+						<li><div class="user-view">
+				<div class="background">
+					<img src="img/perfil.png" />
+				</div>
+				<a href="#!user"><img class="circle" src="img/users/<?php echo $u->getNome(); ?>.jpg"></a>
+				<a href="#!name"><span class="white-text name"><?php echo $u->getNome(); ?></span></a>
+				<a href="#!email"><span class="white-text email"><?php echo $u->getEmail(); ?></span></a>
+			</div></li>
+							<li><a href="dashboard.php">Dashboard</a></li>
+							<li><a href="#">Perfil</a></li>
+							<li><a href="grupos.php">Grupos</a></li>
+							<li><a href="confrontoDireto.php">Confronto Direto</a></li>
+							<li><a href="#">Configurações</a></li>
+							<li><a href="logout.php">Logoff</a></li>
+						</ul>
+>>>>>>> origin/dev
 				</div>
 			</nav>
 		</header>

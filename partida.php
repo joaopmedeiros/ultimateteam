@@ -28,7 +28,7 @@
 			<input type="text" placeholder="0" id="golsDesafiante">
 		</div>
 		<div class="col s2">
-			<img src="img/calebe.jpg" class="circle" width="100%">
+			<img src="users/img/calebe.jpg" class="circle" width="100%">
 		</div>
 	</form>
 		

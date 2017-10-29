@@ -22,6 +22,7 @@
 						session_start();
 						$_SESSION['idusuario'] = $arrayUsuario['idusuario'];
 						$_SESSION['nome'] = $arrayUsuario['nome'];
+						$_SESSION['email'] = $arrayUsuario['email'];
 						$_SESSION['logado'] = TRUE;
 						return true;
 					}
@@ -58,14 +59,14 @@
 		}
 
 		function getId() {
-			return $_SESSION['id_usuario'];
-		}
-
-		function getLogin() {
-			return $_SESSION['login_usuario'];
+			return $_SESSION['idusuario'];
 		}
 		
 		function getNome() {
-			return $_SESSION['nome_usuario'];
+			return $_SESSION['nome'];
+		}
+
+		function getEmail() {
+			return $_SESSION['email'];
 		}
 	}

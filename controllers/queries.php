@@ -325,8 +325,8 @@ function getNomeUsuario($idusuario) {
         $q1 = $pdo->prepare($sqlGetnomeUsuario);
         $q1->bindValue(1, $idusuario, PDO::PARAM_STR);
         $q1->execute();
-        $result = $q1->fetchAll();
-        return $result;  
+   
+        return $q1;  
     } catch(PDOException $e) {
         die($e->getMessage());
     }
