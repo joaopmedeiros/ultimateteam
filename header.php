@@ -13,7 +13,7 @@
 
 	<body>
 		<header>
-			<nav "nav-extended">
+			<nav class="nav">
 				<div class="nav-wrapper teal lighten-2">
 					<a href="#!" class="brand-logo">Ultimate Team</a>
 					<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -34,7 +34,7 @@
 				</div>
 				<a href="#!user"><img class="circle" src="img/users/<?php echo $u->getNome(); ?>.jpg"></a>
 				<a href="#!name"><span class="white-text name"><?php echo $u->getNome(); ?></span></a>
-				<a href="#!email"><span class="white-text email"><?php echo $u->getEmail(); ?></span></a>
+				<a href="#!email"><span class="white-text email"><?php echo $u->getNome(); ?>@acad.pucrs.br</span></a>
 			</div></li>
 							<li><a href="dashboard.php">Dashboard</a></li>
 							<li><a href="#">Perfil</a></li>
