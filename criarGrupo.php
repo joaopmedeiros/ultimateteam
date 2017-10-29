@@ -12,17 +12,17 @@
 </head>
 <body>
   <?php include("header.php"); ?>
-    
+  	<?php include("sideNav.php"); ?> 
 <main>
 <div class="container">
   <div class="row">
-    <form action="/criarGrupo.php">
+    <form id="formulario" method="post" action="upload.php">
       <fieldset>
         <div class="col s12">
           <div class="form-group">
             <div class="col s8 offset-l2">
 
-              <input class="file-upload-input-image" onchange="readURL(this);" type="file" accept="image/*">
+              <input class="file-upload-input-image" id="imagem" type="file">
             </div>
             <div class="col s8 offset-l2">
             
@@ -53,3 +53,4 @@
 
 
 </html>
+
